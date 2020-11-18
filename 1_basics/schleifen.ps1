@@ -37,6 +37,19 @@ foreach($zanl in $meinezahle){
    write-host -Object $zanl;
 }
 
+$procs = Get-Process;
+
+foreach($proc in $procs){
+
+if($proc.ProcessName -eq "notepad"){
+
+write-host -object $proc;
+#$proc.kill();
+Stop-Process $proc;
+}
+
+}
+
 # % ALIAS
 #[int[]] $meinezahle=@(34,12,45,11,32,9);
 [int[]] $meinezahle=34,12,45,11,32,9;
