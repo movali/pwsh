@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<userlist>
+  <user id="1">
+    <username>Olaf</username>
+    <password>Scholz</password>
+    <ort>Berlin</ort>
+  </user>
+  <user id="2">
+    <username>Peter</username>
+    <password>Pan</password>
+    <ort>Kiel</ort>
+  </user>
+  <user id="3">
+    <username>Franz</username>
+    <password>Beckenbauer</password>
+    <ort>München</ort>
+  </user>
+  <user id="4">
+    <username>Otto</username>
+    <password>von Bismarck</password>
+    <ort>Hamburg</ort>
+  </user>
+</userlist>
