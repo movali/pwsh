@@ -1,20 +1,3 @@
-# Commandlets
-Ein „normaler“ PowerShell-Befehl heißt Commandlet (kurz: Cmdlet) oder Funktion (Function). Eine Funktion ist eine Möglichkeit, in der PowerShell selbst wieder einen Befehl zu erstellen, der funktioniert wie ein Commandlet. Da die Unterscheidung zwischen Commandlets und Funktionen aus Nutzersicht zum Teil akademischer Art ist, erfolgt hier zunächst keine Differenzierung.
-## Ein Commandlet besteht typischerweise aus drei Teilen:
-* einem Verb,
-* einem Substantiv und
-* einer (optionalen) Parameterliste.
-* Filter
-Verb und Substantiv werden durch einen Bindestrich „–“ voneinander getrennt, die optionalen Parameter durch Leerzeichen. Daraus ergibt sich der folgende Aufbau:
-Verb-Substantiv [-Parameterliste]
-
-In Script cmdlet.ps1 werden Aufrufe von cmdlets vorgestellt
-
-## Hilfefunktionen
-# Liste aller verfügbaren Befehle (PowerShell-Commandlets, PowerShell-Funktionen, PowerShell-Aliase und klassische ausführbare Dateien) erhält man in der PowerShell auch
-#durch das Commandlet Get-Command.
-Get-Command
-
 
 
 # ALIASE
