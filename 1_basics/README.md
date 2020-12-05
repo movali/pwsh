@@ -1,10 +1,3 @@
-
-
-# Das erste Skript firstep.ps1
-* Variable
-* Escapezeichen `= \
-* Interaktion
-
 # Bedingungen Wenn Dann
 ## Operatoren
 Vergleich unter Ignorierung der Groß-/Kleinschreibung | Vergleich unter Berücksichtigung der Groß-/Kleinschreibung | Bedeutung
