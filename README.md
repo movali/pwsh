@@ -79,18 +79,6 @@ Verb-Substantiv [-Parameterliste] Die Groß- und Kleinschreibung ist bei den Com
   Get-Service
   Get-ChildItem
 
-# Einleitung
-Das Workshop soll ist ein Schnelleinstieg,  in dem die wichtigsten Thema angerissen werden, hierbei werden folgende Themen besprochen:
-
-1. Die Standard Ein und Ausgabe
-2. CMDLET
-3. ALIAS
-4. Bedingungen, Ausdrücke und variable
-5. Schleifen
-
-## Der rote Pfaden
-
-Hierbei wird ein interaktive Loginabfrage auf Konsole von einem einfachen zu einem komplexen Loginabfrage weiterentwickelt. Hierbei werden auch die Datenquellen von einfachen Variblen 
 
 
 ##ALIAS
