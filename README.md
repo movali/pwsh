@@ -8,49 +8,7 @@ Analog wird das .NET-Entwicklungsteam .NET Framework und .NET Core Ende des Jahr
 
 Aber weiterhin gilt, dass einige Commandlets und Funktionen der Windows PowerShell sowie einige Erweiterungsmodule nicht verfügbar sind. Die Version 5.1 wird auch weiterhin eine große Bedeutung haben. Die PowerShell 7.0 wird bisher mit keinem einzigen Betriebssystem ausgeliefert, sondern muss getrennt heruntergeladen und installiert werden. Eine Zusatzinstallation ist in vielen Unternehmen mit stark abgeschotteten Systemen gar nicht möglich.
 
-## MSI-basierte Installation unter Windows
-Quelle: https://github.com/PowerShell/PowerShell/releases/tag/v7.1.0
-
-Das MSI-basierte Installationsprogramm installiert die PowerShell im Standard im Pfad c:\Program Files\PowerShell\. Dieser Pfad lässt sich bei der Installation ändern. In diesem
-Pfad wird ein Unterordner für die Version erstellt, z. B. 7.0.0. In diesem Ordner befinden sich dann alle Dateien der PowerShell inklusive der benötigten Dateien von .NET Core 3.1.
-##TIPP: Die MSI-basierte Installation hat den Vorteil, dass es einige Installationoptionen gibt (siehe folgende Abildungen), z. B. den Zielpfad der Installation
-automatisch zur Umgebungsvariablen %Path% zu ergänzen, sodass man nun pwsh.exe ohne Voranstellen eines Pfadnamens starten kann. Außerdem entsteht ein Eintrag im Startmenü.
-
-##  Installation unter Linux Ubuntu
-QUelle: https://github.com/PowerShell/PowerShell/releases/tag/v7.1.0
-sudo apt install /home/hs/Downloads/powershell_7.0.0.ubuntu.16.04_amd64.deb
-sudo apt-get install -f
-
-### Hinweis
-In der Windows PowerShell war der Name der Programmdatei powershell.exe. Microsoft hat den Namen gegenüber Windows PowerShell 5.1 bewusst geändert, um den Parallelbetrieb einfacher zu machen. Auf einem Windows mit Windows PowerShell 5.1 und PowerShell 6/7 startet man also per Eingabe von 
-* powershell.exe immer die Windows PowerShell  
-
-und durch Eingabe von 
-* pwsh.exe immer die PowerShell 6 oder 7.  
-
-Es können zudem mehrere Versionen der PowerShell 6 und 7 auf einem System koexistieren. So eine Versionskoexistenz war mit der Windows PowerShell nicht möglich.
-
-* Installationsordner
-Die Windows PowerShell installiert sich in folgendes Verzeichnis: %systemroot%\system32\WindowsPowerShell\V1.0 (für 32-Bit-Systeme).Auf 64-Bit-Systemen gibt es die PowerShell zweimal, einmal als 
-** 64-Bit-Version in %systemroot%\system32\WindowsPowerShell\V1.0  
-und einmal als 
-** 32-Bit-Version.  
-Letztere findet man unter %systemroot%\Syswow64\WindowsPowerShell\V1.0. Die 32-Bit-Version braucht man, wenn man eine Bibliothek nutzen will, für die es keine 64-Bit-Version gibt, z. B. den Zugriff auf Microsoft-Access-Datenbanken. Es handelt sich auch dabei nicht um einen Tippfehler: Die 64-Bit-Version befindet sich in einem Verzeichnis, das „32“ im Namen trägt, und die 32-Bit-Version in einem Verzeichnis mit „64“ im Namen! Die 32-Bit-Version und die 64-Bit-Version der PowerShell sieht man im Startmenü: Die 32-Bit-Version hat den Zusatz „(x86)“. Die 64-Bit-Version hat keinen Zusatz. Auch den Editor „ISE“ gibt es in einer 32- und einer 64-Bit-Version.
-ACHTUNG: Dabei ist das V1.0 im Pfad tatsächlich richtig: Microsoft hat dies seit Version 1.0 nicht verändert. Geplant war wohl eine „Side-by-Side“-Installationsoption wie beim .NET Framework. Doch später hat sich Microsoft dazu entschieden, dass eine neue PowerShell immer die alte überschreibt.
-*Skriptausführungsrichtlinie ändern
-Bisher war die PowerShell-Skriptausführung auf allen Betriebssystemen im Standard verboten. Erstmals in Windows Server 2012 R2 hat Microsoft sie im Standard erlaubt, sofern das Skript auf der lokalen Festplatte liegt. Entfernte Skripte können nur mit digitaler Signatur gestartet werden. Diese Einstellung nennt sich
-„RemoteSigned“. In anderen Betriebssystemen gibt es jedoch keine Änderung des Standards, der „Restricted“ lautet.
-Um ein PowerShell-Skript auf Betriebssystemen wie Windows 7, Windows 8.x und Windows 10, wo dies im Standard nicht erlaubt ist, überhaupt starten zu können, müssen Sie die
-Skript-Ausführungsrichtlinie ändern. Später in diesem Buch lernen Sie, welche Optionen es dafür gibt. Für den ersten Test wird die Sicherheit ein wenig abgeschwächt, aber wirklich nur ein wenig. Mit dem folgenden Befehl lässt man die Ausführung von Skripten zu, die sich auf dem lokalen System befinden, verbietet aber Skripten von Netzwerkressourcen (das Internet eingeschlossen) die Ausführung, wenn diese keine digitale Signatur besitzen.
-
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-Get-ExecutionPolicy
-
-* PowerShell Community Extensions (PSCX) herunterladen und installieren
-Bei den „PowerShell Community Extensions“ (kurz PSCX) handelt es sich um ein Open Source-Projekt (ursprünglich auf Codeplex.com, mittlerweile auf Github.com, siehe github.
-com/Pscx/Pscx), das zusätzliche Funktionalität mit Commandlets für die Windows PowerShell realisiert, wie zum Beispiel Get-DHCPServer, Get-DomainController, Get-MountPoint,
-Get-TerminalSession, Set-VolumneLabel, Write-Tar und viele weitere. Das Projekt steht unter Führung von Microsoft, aber jeder .NET-Softwareentwickler ist eingeladen, daran mitzuwirken. Früher wurden in regelmäßigen Abständen neue Versionen veröffentlicht. Die aktuelle Version zum Reaktionsschluss dieses Buchs ist die Version 3.3.2
-vom 17. 1. 2018 (es gibt hier also seit längerem keine neue Version mehr). Diese Version läuft auch unter PowerShell 7.x
+#
 
 #Schnelleinstieg
 PS - ,NET --> 4.8-WIN --PS 5 --- 3.1 ,.Core - Plattform --> PS 7
